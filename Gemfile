@@ -6,7 +6,7 @@ gem 'sassc'
 gem 'webpacker'
 gem "rails", "~> 7.0.6"
 gem "sprockets-rails"
-gem "sqlite3", "~> 1.4"
+
 gem 'devise', '~> 4.9', '>= 4.9.2'
 gem "puma", "~> 5.0"
 gem "importmap-rails"
@@ -24,7 +24,13 @@ end
 
 group :development do
   gem "web-console"
+  gem "sqlite3", "~> 1.4"
   # gem "spring"
+end
+
+group :production do
+  gem 'pg', '~> 1.5', '>= 1.5.3'  
+  #gem 'rails_12factor', '0.0.2'
 end
 
 group :test do
